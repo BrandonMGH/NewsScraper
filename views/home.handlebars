@@ -8,10 +8,10 @@
 {{#each this.comments}}
 <p>{{this.body}}</p>
 <small>{{this.dateAdded}}</small>
-<form action="/api/{{this._id}}/comment" method="POST">
+{{!-- <form action="/api/{{this._id}}/comment" method="POST"> --}}
     
-    <button type="submit">Delete</button>
-</form>
+    <button type="submit" class="deletebtn" data-id={{this._id}}>Delete</button>
+{{!-- </form> --}}
 {{/each}}
 <div class="row">
     <div class="col-lg-2">

@@ -83,7 +83,7 @@ app.delete("/api/:articleId/comment", (req, res) => {
 //             return db.Article.findOneAndUpdate({_id: req.params.articleId}, {$push: { comments: dbComment._id}}, {new: true})
 //         })
         .then(() => res.redirect("/"))
-//         .catch(err => res.json(err));
+        .catch(err => res.json(err));
 });
 
 app.listen(PORT, () => console.log(`App is on http://localhost:${PORT}`));
