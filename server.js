@@ -31,7 +31,7 @@ app.get("/", function (req, res) {
         .find({})
         .populate("comments")
         .then(dbArticles => {
-            //res.json(dbArticles);
+            // res.json(dbArticles);
             res.render("home", {articles: dbArticles});
         });
 })
@@ -47,9 +47,9 @@ app.get("/scrape", (req, res) => {
                 let author = $(element).find("div.entry-author").find("a").text();
                 let snippet = $(element).find("p.summary").text();
                 let link = $(element).find("h3.entry-title").find("a").attr("href")
-                // let pic = $(element).find("div.entry-thumb").find("a").attr("currentSrc")
+                // let pic = $(element).find("a").find("src").text();
                 let postObj = {
-                    // pic: pic,
+                    // pic: pic, 
                     title: title,
                     author: author,
                     snippet: snippet,
@@ -74,6 +74,16 @@ app.post("/api/:articleId/comment", (req, res) => {
         })
         .then(() => res.redirect("/"))
         .catch(err => res.json(err));
+});
+
+app.delete("/api/:articleId/comment", (req, res) => {
+    db.Comment
+        .deleteOne({_id: req.params.articleId})
+//         .then(dbComment => {
+//             return db.Article.findOneAndUpdate({_id: req.params.articleId}, {$push: { comments: dbComment._id}}, {new: true})
+//         })
+        .then(() => res.redirect("/"))
+//         .catch(err => res.json(err));
 });
 
 app.listen(PORT, () => console.log(`App is on http://localhost:${PORT}`));
