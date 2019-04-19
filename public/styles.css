@@ -1,5 +1,5 @@
 .outsideCol {
-    background-color: darkgrey;
+    background-color: black;
 }
 
 h1 {
@@ -8,5 +8,7 @@ h1 {
     font-weight: bold;
     font-size: 50px;
     text-align: center;
+    border-style: double;
+    padding: 50px
 }
 
