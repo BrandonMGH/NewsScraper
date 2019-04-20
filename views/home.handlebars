@@ -1,8 +1,15 @@
+
+
 <form action="/scrape" method="GET">
     <div style="text-align:center;">
         <button type="submit" class="btn btn-outline-dark btn-lg">Scrape for New Articles</button>
     </div>
 </form>
+
+<div style="text-align:center;">
+    <button type="submit" class="btn btn-outline-dark btn-lg clearbtn" onClick="window.location.reload()">Clear Articles</button>
+</div>
+
 {{#each articles}}
 <hr />
 <h3>{{this.title}}</h3>
@@ -10,6 +17,7 @@
 <h5>{{this.snippet}}</h5>
 <button type="submit" class="btn btn-outline-primary articleLink"><a href={{this.link}}>Go To Article</a></button>
 <h5 class="articleHeader">Article comments</h5>
+
 {{#each this.comments}}
 <p>{{this.body}}</p>
 <small>{{this.dateAdded}}</small>

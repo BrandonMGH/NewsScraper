@@ -12,6 +12,18 @@
         })
   });
 
+  $( ".clearbtn" ).click(function(event) {
+    event.preventDefault(); 
+    let commentId = $(this).data("id");
+    console.log(commentId)
+   $.ajax({
+       url: "/",
+       method: "DELETE",
+     }).then(function() {
+         window.location.href
+       })
+ });
+
 //   $( ".scrapeBtn" ).click(function(event) {
 //     event.preventDefault(); 
 //     let commentId = $(this).data("id");
