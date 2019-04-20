@@ -18,7 +18,28 @@ h1 {
     padding: 50px
 }
 
+.articleHeader {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+}
+
 .scrapperImg {
 margin: 50px; 
 }
 
+.CinzelStyle {
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+}
+
+.articleLink{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.submitBtn {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

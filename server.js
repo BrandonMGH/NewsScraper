@@ -47,7 +47,7 @@ app.get("/scrape", (req, res) => {
                 let author = $(element).find("div.entry-author").find("a").text();
                 let snippet = $(element).find("p.summary").text();
                 let link = $(element).find("h3.entry-title").find("a").attr("href")
-                // let pic = $(element).find("a").find("src").text();
+                // let pic = $(element).find("div.entry-thumb").find("a").find("img");
                 let postObj = {
                     // pic: pic, 
                     title: title,
