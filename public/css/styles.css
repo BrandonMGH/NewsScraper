@@ -2,6 +2,12 @@
     background-color: black;
 }
 
+.scrapeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 h1 {
     font-family: 'Cinzel', serif;
     margin: 50px; 
@@ -10,5 +16,9 @@ h1 {
     text-align: center;
     border-style: double;
     padding: 50px
+}
+
+.scrapperImg {
+margin: 50px; 
 }
 

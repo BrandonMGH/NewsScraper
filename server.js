@@ -61,7 +61,7 @@ app.get("/scrape", (req, res) => {
                     .catch(err => console.log(err));
             });
 
-            res.send("Scrapped");
+            res.render("scrape");
         });
 
 });

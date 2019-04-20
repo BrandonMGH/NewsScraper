@@ -6,10 +6,9 @@
      console.log(commentId)
     $.ajax({
         url: `/api/${commentId}/comment`,
-        method: "DELETE"
-      })
-        .then(function() {
-          window.location.href = `/`;
+        method: "DELETE",
+      }).then(function() {
+          window.location.href
         })
   });
 

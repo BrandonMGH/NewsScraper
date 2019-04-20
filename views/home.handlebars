@@ -1,3 +1,8 @@
+<form action="/scrape" method="GET">
+<div style="text-align:center;">
+     <button type="submit">Scrape New Articles</button>
+</div>
+</form>
 {{#each articles}}
 <hr />
 <h3>{{this.title}}</h3>
@@ -9,15 +14,15 @@
 <p>{{this.body}}</p>
 <small>{{this.dateAdded}}</small>
 {{!-- <form action="/api/{{this._id}}/comment" method="POST"> --}}
-    
-    <button type="submit" class="deletebtn" data-id={{this._id}}>Delete</button>
+
+<button type="submit" class="deletebtn" onClick="window.location.reload()" data-id={{this._id}}>Delete Comment</button>
 {{!-- </form> --}}
 {{/each}}
 <div class="row">
     <div class="col-lg-2">
         <form action="/api/{{this._id}}/comment" method="POST">
             <textarea name="body"></textarea>
-            <button type="submit">Submit Comment</button>
+            <button type="submit" class="scrapeBtn">Submit Comment</button>
         </form>
     </div>
     <hr />
